@@ -13,3 +13,116 @@
  *= require_tree .
  *= require_self
  */
+ @charset "UTF-8";
+
+ html body {
+   margin: 0;
+   padding: 0;
+ }
+
+ #map-wrap {
+   max-width: 100%;
+   min-width: 280px;
+   margin: auto;
+   height: 100vh;
+ }
+ #map-wrap img {
+   max-width: none;
+ }
+ #map-wrap #map-canvas {
+   height: 100%;
+   width: 100%;
+ }
+
+ .gmaplabels{
+   height: 100px;
+   width: 100px;
+   color: red;
+ }
+
+ .station-property{
+   height: 20px;
+   width: 20px;
+   background-color: white;
+   background-image: url("house.png");    /* 背景画像指定 */
+   background-size:  contain;
+   border:double 2px #ccc;
+ }
+
+ .station-property-des{
+   height: 30px;
+   width: 30px;
+   background-color: white;
+   background-image: url("house.png");    /* 背景画像指定 */
+   background-size:  contain;
+   border:solid 5px yellow;
+ }
+
+ .station-blue{
+   height: 20px;
+   width: 20px;
+   background-color: blue;
+   border:double 2px #ccc;
+ }
+
+ .station-red{
+   height: 20px;
+   width: 20px;
+   background-color: red;
+   border:double 2px #ccc;
+ }
+
+ .station-yellow{
+   height: 20px;
+   width: 20px;
+   background-color: yellow;
+   border:double 2px #ccc;
+ }
+
+ .station-card{
+   color: green;
+   font-size: 15px;
+   text-align: center;
+   vertical-align: middle;
+   height: 20px;
+   width: 20px;
+   background-color: white;
+   border:double 2px #ccc;
+ }
+
+ .team-red {
+   height: 30px;
+   width: 30px;
+   background-color: white;
+   background-image: url("train_red.svg");    /* 背景画像指定 */
+   background-size:  contain;
+ }
+ .team-blue {
+   height: 30px;
+   width: 30px;
+   background-color: white;
+   background-image: url("train_blue.svg");    /* 背景画像指定 */
+   background-size:  contain;
+ }
+ .team-yellow {
+   height: 30px;
+   width: 30px;
+   background-color: white;
+   background-image: url("train_yellow.svg");    /* 背景画像指定 */
+   background-size:  contain;
+ }
+ .team-green {
+   height: 30px;
+   width: 30px;
+   background-color: white;
+   background-image: url("train_green.svg");    /* 背景画像指定 */
+   background-size:  contain;
+ }
+
+ .kozawa {
+   height: 30px;
+   width: 30px;
+   background-color: white;
+   background-image: url("mdma.jpg");    /* 背景画像指定 */
+   background-size:  contain;
+ }
