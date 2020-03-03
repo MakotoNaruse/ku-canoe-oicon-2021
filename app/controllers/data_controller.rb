@@ -1,6 +1,6 @@
 class DataController < ApplicationController
   def stations
-      stations = [{"lat": "35.028784062101586",
+      stations = '[{"lat": "35.028784062101586",
       "lng": "135.77923866394048",
       "type": "station-blue",
       "name": "百万遍"},
@@ -458,9 +458,47 @@ class DataController < ApplicationController
       "type": "station-property",
       "name": "京都駅八条口",
       "discription": "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>近鉄<td>1億円<td>20%<td></tr><tr><td>ミスタードーナツ<td>5000万円<td>30%<td></tr><tr><td>ホテル<td>1億円<td>20%<td></tr><tr><td><tr>お土産や<td>3000万円<td>100%<td></tr>お土産や<td>3000万円<td>100%<td></tr><tr>お土産や<td>3000万円<td>100%<td></tr><tr><td>551HORAI<td>5000万円<td>51%<td></tr><tr><td>マクド<td>3000万円<td>100%<td></tr></table>"}
-      ]
+      ]'
 
-      render :json => stations
+      json_stations = JSON.parse(stations)
+      station_hash = {}
+      json_stations.each do |station|
+          station_hash[station['name']] = {
+              "type" => station['type']
+          }
+      end
+
+      result = station_hash[params[:station]]
+      if result
+          message = "停留所名: " + params[:station] + "\n"
+          if result['type'] == 'station-blue'
+              message += "プラス駅\n"
+              message += "+サイコロの目×1000万円\n"
+              message += "「サイコロ1」と送信してください！"
+          elsif result['type'] == 'station-red'
+              message += "マイナス駅\n"
+              message += "-サイコロの目×1000万円\n"
+              message += "「サイコロ1」と送信してください...。"
+          elsif result['type'] == 'station-card'
+              message += "カード売り場\n"
+              message += "ここにカード売り場の情報を表示したい"
+          elsif result['type'] == 'station-property'
+              message += "物件駅\n"
+              message += "ここに物件の情報を表示したい"
+          elsif result['type'] == 'station-property-des'
+              message += "目的地！！\n"
+              message += "物件駅\n"
+              message += "ここに物件の情報を表示したい"
+          end
+      else
+          message = "その駅は存在しません！"
+      end
+
+      if params[:station]
+          render plain: message
+      else
+          render :json => stations
+      end
   end
 
   def ways
