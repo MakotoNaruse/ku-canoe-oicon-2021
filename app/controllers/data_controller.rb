@@ -1991,9 +1991,13 @@ class DataController < ApplicationController
   end
 
   def teams_message
-    message = "チーム情報一覧\n\n"
+    message = ""
+    noppo = ""
     @@teams.each do |team|
-      next if team[:style] == 'kozawa'
+      if team[:style] == 'kozawa'
+        noppo = team[:station]
+        next
+      end
 
       message += "#{team[:name]}\n"
       message += "現在地: #{team[:station]}\n"
@@ -2009,6 +2013,7 @@ class DataController < ApplicationController
       end
       message += "\n"
     end
+    message += "のっぽは#{noppo}にいるよ！"
     render :plain => message
   end
 
