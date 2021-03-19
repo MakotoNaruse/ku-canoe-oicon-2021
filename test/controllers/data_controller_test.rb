@@ -5,5 +5,4 @@ class DataControllerTest < ActionDispatch::IntegrationTest
     get data_stations_url
     assert_response :success
   end
-
 end
