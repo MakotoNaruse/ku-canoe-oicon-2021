@@ -897,7 +897,7 @@ class DataController < ApplicationController
           :name => "伊勢丹",
           :price => "5億円",
           :rate => "20%",
-          :owner => ""
+          :owner => "酒井"
         },
         {
           :name => "Cube",
