@@ -65,10 +65,38 @@ class DataController < ApplicationController
     {
       :station => "百万遍",
       :style => "kozawa",
-      :x => "36",
+      :x => "-6",
       :y => "-6",
-      :name => "こざわ",
+      :name => "のっぽ",
       :discription => ""
+    }
+  ]
+
+  @@cards = [
+    {
+      :name => "急行カード",
+      :buy => "1000万円",
+      :sell => "500万円"
+    },
+    {
+      :name => "特急カード",
+      :buy => "4000万円",
+      :sell => "2000万円"
+    },
+    {
+      :name => "新幹線カード",
+      :buy => "1億円",
+      :sell => "5000万円"
+    },
+    {
+      :name => "☆に願いをカード",
+      :buy => "2億円",
+      :sell => "1億円"
+    },
+    {
+      :name => "スペシャルカード",
+      :buy => "1億6000万円",
+      :sell => "8000万円"
     }
   ]
 
@@ -897,7 +925,7 @@ class DataController < ApplicationController
           :name => "伊勢丹",
           :price => "5億円",
           :rate => "20%",
-          :owner => "酒井"
+          :owner => ""
         },
         {
           :name => "Cube",
@@ -1940,23 +1968,29 @@ class DataController < ApplicationController
     render :json => @@ways
   end
 
+  @@money = "1000万円"
+
   def stations
     if params[:station].blank?
       @@stations.each do |station|
         if station[:type] == 'station-blue'
-          discription = "+サイコロの目×1000万円"
+          discription = "＋サイコロの目×#{@@money}"
         elsif station[:type] == 'station-red'
-          discription = "-サイコロの目×1000万円"
+          discription = "−サイコロの目×#{@@money}"
         elsif station[:type] == 'station-card'
-          discription = "カード売り場"
+          discription = "<table><tr><th>カード名<th>販売価格<th>売却価格</tr>"
+          @@cards.each do |card|
+            discription += "<tr><td>#{card[:name]}<td>#{card[:buy]}<td>#{card[:sell]}</tr>"
+          end
+          discription += "</table>"
         elsif station[:type] == 'station-property' || station[:type] == 'station-property-des'
           discription = "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr>"
           station[:properties].each do |property|
             discription += "<tr><td>#{property[:name]}<td>#{property[:price]}<td>#{property[:rate]}<td>#{property[:owner]}</tr>"
           end
           discription += "</table>"
-          station[:discription] = discription
         end
+        station[:discription] = discription
       end
       render :json => @@stations
       return
@@ -1975,15 +2009,20 @@ class DataController < ApplicationController
       message = "停留所名: " + params[:station] + "\n"
       if result[:type] == 'station-blue'
         message += "プラス駅\n"
-        message += "+サイコロの目×1000万円\n"
+        message += "＋サイコロの目×#{@@money}\n"
         message += "「サイコロ1」と送信してください！"
       elsif result[:type] == 'station-red'
         message += "マイナス駅\n"
-        message += "-サイコロの目×1000万円\n"
+        message += "−サイコロの目×#{@@money}\n"
         message += "「サイコロ1」と送信してください...。"
       elsif result[:type] == 'station-card'
-        message += "カード売り場\n"
-        message += "ここにカード売り場の情報を表示したい"
+        message += "カード売り場\n\n"
+        message += "カード名 | 販売価格 | 売却価格\n"
+        @@cards.each do |card|
+          message += "#{card[:name]} | #{card[:buy]} | #{card[:sell]}\n"
+        end
+        message += "\n"
+        message += "カードを購入する場合は欲しいカード名を送ってください！"
       elsif result[:type] == 'station-property'
         message += "物件駅\n\n"
         message += "物件名 | 価格 | 利益率 |保有者\n"
