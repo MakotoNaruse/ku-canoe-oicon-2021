@@ -1,4 +1,6 @@
 class DataController < ApplicationController
+  @@money = "1000万円"
+
   @@ways = [
     ["百万遍", "京大正門前", "近衛通", "京大病院前", "熊野神社前", "岡崎道", "岡崎神社前",
      "東天王町", "真如堂前", "錦林車庫前", "浄土寺", "銀閣寺道", "北白川", "京大農学部前",
@@ -31,12 +33,14 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "京大正門前",
+      :station => "近衛通",
       :style => "team-red",
       :x => "-6",
       :y => "-6",
       :name => "チーム1",
-      :discription => "所持金: 0億0000万円"
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
     },
     {
       :station => "京大正門前",
@@ -44,7 +48,9 @@ class DataController < ApplicationController
       :x => "-6",
       :y => "36",
       :name => "チーム2",
-      :discription => "所持金: 0億0000万円"
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
     },
     {
       :station => "京大正門前",
@@ -52,7 +58,9 @@ class DataController < ApplicationController
       :x => "36",
       :y => "36",
       :name => "チーム3",
-      :discription => "所持金: 0億0000万円"
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
     },
     {
       :station => "京大正門前",
@@ -60,7 +68,9 @@ class DataController < ApplicationController
       :x => "36",
       :y => "-6",
       :name => "チーム4",
-      :discription => "所持金: 0億0000万円"
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
     },
     {
       :station => "百万遍",
@@ -1961,14 +1971,50 @@ class DataController < ApplicationController
   ]
 
   def teams
+    @@teams.each do |team|
+      next if team[:style] == 'kozawa'
+
+      discription = "現在地: #{team[:station]}<br>"
+      discription += "所持金: #{team[:amount]}<br>"
+      discription += "所持カード:<br>"
+      team[:cards].each do |card|
+        discription += "　#{card}<br>"
+      end
+      discription += "所持物件:<br>"
+      discription += "<table><tr><th>物件名<th>価格<th>利益率</tr>"
+      team[:properties].each do |property|
+        discription += "<tr><td>#{property[:name]}<td>#{property[:price]}<td>#{property[:rate]}</tr>"
+      end
+      team[:discription] = discription
+    end
     render :json => @@teams
+  end
+
+  def teams_message
+    message = "チーム情報一覧\n\n"
+    @@teams.each do |team|
+      next if team[:style] == 'kozawa'
+
+      message += "#{team[:name]}\n"
+      message += "現在地: #{team[:station]}\n"
+      message += "所持金: #{team[:amount]}\n"
+      message += "所持カード:\n"
+      team[:cards].each do |card|
+        message += "　#{card}\n"
+      end
+      message += "所持物件:\n"
+      message += "物件名 | 価格 | 利益率\n"
+      team[:properties].each do |property|
+        message += "#{property[:name]} | #{property[:price]} | #{property[:rate]}\n"
+      end
+      message += "\n"
+    end
+    render :plain => message
   end
 
   def ways
     render :json => @@ways
   end
-
-  @@money = "1000万円"
 
   def stations
     if params[:station].blank?
@@ -2000,7 +2046,7 @@ class DataController < ApplicationController
     @@stations.each do |station|
       station_hash[station[:name]] = {
         :type => station[:type],
-        :properties => station[:properties],
+        :properties => station[:properties]
       }
     end
 
@@ -2022,7 +2068,7 @@ class DataController < ApplicationController
           message += "#{card[:name]} | #{card[:buy]} | #{card[:sell]}\n"
         end
         message += "\n"
-        message += "カードを購入する場合は欲しいカード名を送ってください！"
+        message += "カードの購入/売却ができます！"
       elsif result[:type] == 'station-property'
         message += "物件駅\n\n"
         message += "物件名 | 価格 | 利益率 |保有者\n"
