@@ -140,7 +140,7 @@ class DataController < ApplicationController
       :x => "-6",
       :y => "-6",
       :name => "チームD",
-      :amount => "2億7200万円",
+      :amount => "9200万円",
       :cards => ["寺・神社カード"],
       :properties => [
         {
@@ -148,10 +148,30 @@ class DataController < ApplicationController
           :price => "3000万円",
           :rate => "100%",
         },
+        {
+          :name => "マクド",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "駐車場",
+          :price => "5000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "駐車場",
+          :price => "5000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "駐車場",
+          :price => "5000万円",
+          :rate => "50%",
+        }
       ]
     },
     {
-      :station => "東山三条",
+      :station => "烏丸五条",
       :style => "kozawa",
       :x => "-6",
       :y => "-6",
@@ -1253,7 +1273,7 @@ class DataController < ApplicationController
           :name => "マクド",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "知恩院",
@@ -1265,19 +1285,19 @@ class DataController < ApplicationController
           :name => "駐車場",
           :price => "5000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "駐車場",
           :price => "5000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "駐車場",
           :price => "5000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "D"
         }
       ]
     },
