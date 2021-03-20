@@ -59,12 +59,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "四条河原町",
+      :station => "五条高倉",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "3950万円",
+      :amount => "8950万円",
       :cards => [],
       :properties => [
         {
