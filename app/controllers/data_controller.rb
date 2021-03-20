@@ -43,12 +43,12 @@ class DataController < ApplicationController
       :properties => []
     },
     {
-      :station => "堀川今出川",
+      :station => "河原町丸太町",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "1億1950万円",
+      :amount => "9950万円",
       :cards => [],
       :properties => [
         {
@@ -59,12 +59,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "裁判所前",
+      :station => "堀川丸太町",
       :style => "team-yellow",
       :x => "36",
       :y => "36",
       :name => "チームC",
-      :amount => "2850万円",
+      :amount => "3850万円",
       :cards => ["急行カード","急行カード","急行カード"],
       :properties => []
     },
