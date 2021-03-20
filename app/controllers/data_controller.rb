@@ -33,7 +33,7 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "七条河原町",
+      :station => "河原町三条",
       :style => "team-red",
       :x => "-6",
       :y => "36",
@@ -2111,7 +2111,7 @@ class DataController < ApplicationController
       end
       message += "\n"
     end
-    message += "のっぽは#{noppo}にいるよ！"
+    message += "のっぽはCのそばにいるよ！"
     render :plain => message
   end
 
