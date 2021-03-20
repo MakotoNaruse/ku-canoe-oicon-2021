@@ -79,7 +79,7 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "府立大学前",
+      :station => "洛北高校前",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
@@ -150,12 +150,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "出町柳駅前",
+      :station => "百万遍",
       :style => "team-yellow",
       :x => "36",
       :y => "36",
       :name => "チームC",
-      :amount => "1億3850万円",
+      :amount => "2億2850万円",
       :cards => [],
       :properties => [
         {
