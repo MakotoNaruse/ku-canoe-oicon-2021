@@ -2170,8 +2170,13 @@ class DataController < ApplicationController
         message += "物件を購入する場合は欲しい物件名を送ってください！"
       elsif result[:type] == 'station-property-des'
         message += "目的地！！\n"
-        message += "物件駅\n"
-        message += "ここに物件の情報を表示したい"
+        message += "物件駅\n\n"
+        message += "物件名 | 価格 | 利益率 |保有者\n"
+        result[:properties].each do |property|
+          message += "#{property[:name]} | #{property[:price]} | #{property[:rate]} | #{property[:owner]}\n"
+        end
+        message += "\n"
+        message += "物件を購入する場合は欲しい物件名を送ってください！"
       end
     else
       message = "その駅は存在しません！"
