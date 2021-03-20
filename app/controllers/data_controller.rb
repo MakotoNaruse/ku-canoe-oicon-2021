@@ -776,7 +776,7 @@ class DataController < ApplicationController
     {
       :lat => "35.01363552603792",
       :lng => "135.75164754650675",
-      :type => "station-property-des",
+      :type => "station-property",
       :name => "二条城前",
       :discription => "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>二条城<td>3億円<td>20%<td></tr><tr><td>民宿<td>7000万円<td>50%<td></tr><tr><td>民宿<td>7000万円<td>50%<td></tr><tr><td>結婚式場<td>7000万円<td>50%<td></tr><tr><td>美術館<td>1億円<td>20%<td></tr></table>",
       :properties => [
@@ -1016,7 +1016,7 @@ class DataController < ApplicationController
     {
       :lat => "34.989243106289095",
       :lng => "135.76423214128175",
-      :type => "station-blue",
+      :type => "station-blue-des",
       :name => "七条河原町"
     },
     {
@@ -2064,6 +2064,9 @@ class DataController < ApplicationController
       @@stations.each do |station|
         if station[:type] == 'station-blue'
           discription = "＋サイコロの目×#{@@money}"
+        elsif station[:type] == 'station-blue-des'
+          discription = "目的地！！<br>"
+          discription += "＋サイコロの目×#{@@money}"
         elsif station[:type] == 'station-red'
           discription = "−サイコロの目×#{@@money}"
         elsif station[:type] == 'station-card'
@@ -2097,6 +2100,11 @@ class DataController < ApplicationController
     if result
       message = "停留所名: " + params[:station] + "\n"
       if result[:type] == 'station-blue'
+        message += "プラス駅\n"
+        message += "＋サイコロの目×#{@@money}\n"
+        message += "「サイコロ1」と送信してください！"
+      elsif result[:type] == 'station-blue'
+        message += "目的地！！\n"
         message += "プラス駅\n"
         message += "＋サイコロの目×#{@@money}\n"
         message += "「サイコロ1」と送信してください！"

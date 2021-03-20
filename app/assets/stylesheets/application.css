@@ -65,6 +65,13 @@
    border:double 2px #ccc;
  }
 
+ .station-blue-des{
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  border:double 2px #ccc;
+}
+
  .station-red{
    height: 20px;
    width: 20px;
