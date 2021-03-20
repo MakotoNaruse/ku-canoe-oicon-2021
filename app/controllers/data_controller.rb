@@ -48,7 +48,7 @@ class DataController < ApplicationController
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "5950万円",
+      :amount => "1億1950万円",
       :cards => [],
       :properties => [
         {
