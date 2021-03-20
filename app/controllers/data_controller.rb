@@ -2103,7 +2103,7 @@ class DataController < ApplicationController
         message += "プラス駅\n"
         message += "＋サイコロの目×#{@@money}\n"
         message += "「サイコロ1」と送信してください！"
-      elsif result[:type] == 'station-blue'
+      elsif result[:type] == 'station-blue-des'
         message += "目的地！！\n"
         message += "プラス駅\n"
         message += "＋サイコロの目×#{@@money}\n"
