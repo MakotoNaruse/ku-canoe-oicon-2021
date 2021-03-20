@@ -182,7 +182,7 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "烏丸五条",
+      :station => "三条京阪前",
       :style => "kozawa",
       :x => "-6",
       :y => "-6",
