@@ -59,7 +59,7 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "京大正門前",
+      :station => "丸太町京阪前",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
