@@ -1,5 +1,5 @@
 class DataController < ApplicationController
-  @@money = "1000万円"
+  @@money = "2000万円"
 
   @@ways = [
     ["百万遍", "京大正門前", "近衛通", "京大病院前", "熊野神社前", "岡崎道", "岡崎神社前",
