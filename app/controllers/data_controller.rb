@@ -33,13 +33,13 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "北大路堀川",
+      :station => "北大路バスターミナル",
       :style => "team-red",
       :x => "-6",
       :y => "36",
       :name => "チームA",
-      :amount => "4500万円",
-      :cards => ["急行カード","急行カード","急行カード"],
+      :amount => "1億8500万円",
+      :cards => ["急行カード","急行カード"],
       :properties => [
         {
           :name => "民宿",
@@ -55,6 +55,26 @@ class DataController < ApplicationController
           :name => "結婚式場",
           :price => "7000万円",
           :rate => "50%",
+        },
+        {
+          :name => "バス会社",
+          :price => "3億円",
+          :rate => "50%",
+        },
+        {
+          :name => "北大路ビブレ",
+          :price => "3億円",
+          :rate => "50%",
+        },
+        {
+          :name => "スターバックスコーヒー",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "サーティーワンアイスクリーム",
+          :price => "3000万円",
+          :rate => "100%",
         },
       ]
     },
@@ -699,7 +719,7 @@ class DataController < ApplicationController
           :name => "バス会社",
           :price => "3億円",
           :rate => "50%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "地下鉄",
@@ -711,19 +731,19 @@ class DataController < ApplicationController
           :name => "北大路ビブレ",
           :price => "3億円",
           :rate => "50%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "スターバックスコーヒー",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "サーティーワンアイスクリーム",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         }
       ]
     },
