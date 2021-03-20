@@ -191,12 +191,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "四条京阪前",
+      :station => "下鴨神社前",
       :style => "team-green",
       :x => "-6",
       :y => "-6",
       :name => "チームD",
-      :amount => "2億3200万円",
+      :amount => "1億4200万円",
       :cards => ["最寄りの駅でカード"],
       :properties => [
         {
@@ -238,6 +238,26 @@ class DataController < ApplicationController
           :name => "ラーメン屋",
           :price => "1000万円",
           :rate => "100%",
+        },
+        {
+          :name => "料亭",
+          :price => "2000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "料亭",
+          :price => "2000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "料亭",
+          :price => "2000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "みたらし団子屋",
+          :price => "3000万円",
+          :rate => "70%",
         },
       ]
     },
@@ -1761,25 +1781,25 @@ class DataController < ApplicationController
           :name => "料亭",
           :price => "2000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "料亭",
           :price => "2000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "料亭",
           :price => "2000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "みたらし団子屋",
           :price => "3000万円",
           :rate => "70%",
-          :owner => ""
+          :owner => "D"
         }
       ]
     },
