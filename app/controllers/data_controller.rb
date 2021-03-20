@@ -43,7 +43,7 @@ class DataController < ApplicationController
       :properties => []
     },
     {
-      :station => "百万遍",
+      :station => "同志社前",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
@@ -63,14 +63,20 @@ class DataController < ApplicationController
       :properties => []
     },
     {
-      :station => "百万遍",
+      :station => "熊野神社前",
       :style => "team-green",
       :x => "-6",
       :y => "-6",
       :name => "チームD",
       :amount => "7200万円",
       :cards => [],
-      :properties => []
+      :properties => [
+        {
+          :name => "八つ橋屋",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+      ]
     },
     {
       :station => "裁判所前",
@@ -269,7 +275,7 @@ class DataController < ApplicationController
           :name => "パフェ店",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "D"
         },
         {
           :name => "ラーメン屋",
