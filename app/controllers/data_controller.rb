@@ -33,13 +33,13 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "堀川下立売",
+      :station => "北大路堀川",
       :style => "team-red",
       :x => "-6",
       :y => "36",
       :name => "チームA",
-      :amount => "2億1500万円",
-      :cards => ["急行カード","急行カード"],
+      :amount => "4500万円",
+      :cards => ["急行カード","急行カード","急行カード"],
       :properties => [
         {
           :name => "民宿",
