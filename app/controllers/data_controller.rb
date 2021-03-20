@@ -59,12 +59,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "東山三条",
+      :station => "京大正門前",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "7950万円",
+      :amount => "2950万円",
       :cards => [],
       :properties => [
         {
@@ -121,7 +121,12 @@ class DataController < ApplicationController
           :name => "タピオカ",
           :price => "1000万円",
           :rate => "200%",
-        }
+        },
+        {
+          :name => "ルネ",
+          :price => "5000万円",
+          :rate => "100%",
+        },
       ]
     },
     {
@@ -424,7 +429,7 @@ class DataController < ApplicationController
           :name => "ルネ",
           :price => "5000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "学術メディアセンター",
