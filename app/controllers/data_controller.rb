@@ -659,7 +659,7 @@ class DataController < ApplicationController
     {
       :lat => "35.04386297036127",
       :lng => "135.75830847688908",
-      :type => "station-property",
+      :type => "station-property-des",
       :name => "北大路バスターミナル",
       :discription => "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>大谷大学<td>2億円<td>5%<td></tr><tr><td>バス会社<td>3億円<td>50%<td></tr><tr><td>地下鉄<td>3億円<td>50%<td></tr><tr><td>北大路ビブレ<td>3億円<td>50%<td></tr><tr><td>スターバックスコーヒー<td>3000万円<td>100%<td></tr><tr><td>サーティーワンアイスクリーム<td>3000万円<td>100%<td></tr></table>",
       :properties => [
@@ -1259,7 +1259,7 @@ class DataController < ApplicationController
     {
       :lat => "35.009458955973194",
       :lng => "135.77812550025698",
-      :type => "station-property-des",
+      :type => "station-property",
       :name => "東山三条",
       :discription => "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>地下鉄駅<td>1億円<td>20%<td></tr><tr><td>マクド<td>3000万円<td>100%<td></tr><tr><td>マルシン飯店<td>3000万円<td>100%<td></tr><tr><td>知恩院<td>1億円<td>10%<td></tr><tr><td>駐車場<td>5000万円<td>50%<td></tr><tr><td>駐車場<td>5000万円<td>50%<td></tr><tr><td>駐車場<td>5000万円<td>50%<td></tr></table>",
       :properties => [
