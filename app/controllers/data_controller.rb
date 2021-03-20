@@ -38,9 +38,25 @@ class DataController < ApplicationController
       :x => "-6",
       :y => "36",
       :name => "チームA",
-      :amount => "7500万円",
+      :amount => "2500万円",
       :cards => [],
-      :properties => []
+      :properties => [
+        {
+          :name => "民宿",
+          :price => "7000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "民宿",
+          :price => "7000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "結婚式場",
+          :price => "7000万円",
+          :rate => "50%",
+        },
+      ]
     },
     {
       :station => "四条河原町",
@@ -774,19 +790,19 @@ class DataController < ApplicationController
           :name => "民宿",
           :price => "7000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "民宿",
           :price => "7000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "結婚式場",
           :price => "7000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "美術館",
