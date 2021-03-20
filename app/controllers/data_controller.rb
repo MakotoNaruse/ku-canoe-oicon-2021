@@ -91,7 +91,7 @@ class DataController < ApplicationController
       :y => "36",
       :name => "チームC",
       :amount => "4850万円",
-      :cards => ["急行カード","急行カード"],
+      :cards => ["急行カード"],
       :properties => []
     },
     {
