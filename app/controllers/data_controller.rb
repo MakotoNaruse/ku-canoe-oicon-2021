@@ -43,18 +43,28 @@ class DataController < ApplicationController
       :properties => []
     },
     {
-      :station => "河原町丸太町",
+      :station => "四条河原町",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "9950万円",
+      :amount => "3950万円",
       :cards => [],
       :properties => [
         {
           :name => "コンビニ",
           :price => "3000万円",
           :rate => "70%",
+        },
+        {
+          :name => "スタバ",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "ラーメン屋",
+          :price => "3000万円",
+          :rate => "100%",
         },
       ]
     },
@@ -1376,13 +1386,13 @@ class DataController < ApplicationController
           :name => "スタバ",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "ラーメン屋",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "パチンコ",
