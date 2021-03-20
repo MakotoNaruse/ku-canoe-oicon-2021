@@ -72,7 +72,7 @@ class DataController < ApplicationController
       :cards => [],
       :properties => [
         {
-          :name => "八つ橋屋",
+          :name => "パフェ店",
           :price => "3000万円",
           :rate => "100%",
         },
