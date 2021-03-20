@@ -152,7 +152,7 @@ class DataController < ApplicationController
       :y => "-6",
       :name => "チームD",
       :amount => "3億6200万円",
-      :cards => ["寺・神社カード"],
+      :cards => ["寺・神社カード","最寄りの駅でカード"],
       :properties => [
         {
           :name => "パフェ店",
