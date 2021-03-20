@@ -33,12 +33,12 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "高野橋東詰",
+      :station => "叡電元田中",
       :style => "team-red",
       :x => "-6",
       :y => "36",
       :name => "チームA",
-      :amount => "3億3500万円",
+      :amount => "2億1500万円",
       :cards => ["急行カード","急行カード"],
       :properties => [
         {
@@ -75,6 +75,36 @@ class DataController < ApplicationController
           :name => "サーティーワンアイスクリーム",
           :price => "3000万円",
           :rate => "100%",
+        },
+        {
+          :name => "スーパーマーケット",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "鍋料理屋",
+          :price => "1000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "中華料理屋",
+          :price => "1000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "丼屋",
+          :price => "1000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "焼肉屋",
+          :price => "1000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "叡電元田中駅",
+          :price => "5000万円",
+          :rate => "70%",
         },
       ]
     },
@@ -548,37 +578,37 @@ class DataController < ApplicationController
           :name => "スーパーマーケット",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "鍋料理屋",
           :price => "1000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "中華料理屋",
           :price => "1000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "丼屋",
           :price => "1000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "焼肉屋",
           :price => "1000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "A"
         },
         {
           :name => "叡電元田中駅",
           :price => "5000万円",
           :rate => "70%",
-          :owner => ""
+          :owner => "A"
         }
       ]
     },
