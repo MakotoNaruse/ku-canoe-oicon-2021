@@ -33,47 +33,47 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "近衛通",
+      :station => "百万遍",
       :style => "team-red",
       :x => "-6",
       :y => "-6",
-      :name => "チーム1",
-      :amount => "0億0000万円",
-      :cards => [],
-      :properties => []
-    },
-    {
-      :station => "京大正門前",
-      :style => "team-blue",
-      :x => "-6",
-      :y => "36",
-      :name => "チーム2",
-      :amount => "0億0000万円",
-      :cards => [],
-      :properties => []
-    },
-    {
-      :station => "京大正門前",
-      :style => "team-yellow",
-      :x => "36",
-      :y => "36",
-      :name => "チーム3",
-      :amount => "0億0000万円",
-      :cards => [],
-      :properties => []
-    },
-    {
-      :station => "京大正門前",
-      :style => "team-green",
-      :x => "36",
-      :y => "-6",
-      :name => "チーム4",
+      :name => "チームA",
       :amount => "0億0000万円",
       :cards => [],
       :properties => []
     },
     {
       :station => "百万遍",
+      :style => "team-blue",
+      :x => "-6",
+      :y => "36",
+      :name => "チームB",
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
+    },
+    {
+      :station => "百万遍",
+      :style => "team-yellow",
+      :x => "36",
+      :y => "36",
+      :name => "チームC",
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
+    },
+    {
+      :station => "百万遍",
+      :style => "team-green",
+      :x => "36",
+      :y => "-6",
+      :name => "チームD",
+      :amount => "0億0000万円",
+      :cards => [],
+      :properties => []
+    },
+    {
+      :station => "出町柳駅前",
       :style => "kozawa",
       :x => "-6",
       :y => "-6",
