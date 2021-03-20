@@ -150,18 +150,43 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "百万遍",
+      :station => "銀閣寺道",
       :style => "team-yellow",
       :x => "36",
       :y => "36",
       :name => "チームC",
-      :amount => "2億2850万円",
+      :amount => "10億1850万円",
       :cards => [],
       :properties => [
         {
           :name => "ブックオフ",
           :price => "3000万円",
           :rate => "100%",
+        },
+        {
+          :name => "哲学の道図書館",
+          :price => "3000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "白沙村荘記念館",
+          :price => "5000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "和菓子店",
+          :price => "7000万円",
+          :rate => "70%",
+        },
+        {
+          :name => "蕎麦屋",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "和雑貨店",
+          :price => "3000万円",
+          :rate => "50%",
         },
       ]
     },
@@ -299,31 +324,31 @@ class DataController < ApplicationController
           :name => "哲学の道図書館",
           :price => "3000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "C"
         },
         {
           :name => "白沙村荘記念館",
           :price => "5000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "C"
         },
         {
           :name => "和菓子店",
           :price => "7000万円",
           :rate => "70%",
-          :owner => ""
+          :owner => "C"
         },
         {
           :name => "蕎麦屋",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "C"
         },
         {
           :name => "和雑貨店",
           :price => "3000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "C"
         }
       ]
     },
