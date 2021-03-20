@@ -1016,7 +1016,7 @@ class DataController < ApplicationController
     {
       :lat => "34.989243106289095",
       :lng => "135.76423214128175",
-      :type => "station-blue-des",
+      :type => "station-blue",
       :name => "七条河原町"
     },
     {
@@ -1199,7 +1199,7 @@ class DataController < ApplicationController
     {
       :lat => "35.009458955973194",
       :lng => "135.77812550025698",
-      :type => "station-property",
+      :type => "station-property-des",
       :name => "東山三条",
       :discription => "<table><tr><th>物件名<th>価格<th>利益率<th>保有者</tr><tr><td>地下鉄駅<td>1億円<td>20%<td></tr><tr><td>マクド<td>3000万円<td>100%<td></tr><tr><td>マルシン飯店<td>3000万円<td>100%<td></tr><tr><td>知恩院<td>1億円<td>10%<td></tr><tr><td>駐車場<td>5000万円<td>50%<td></tr><tr><td>駐車場<td>5000万円<td>50%<td></tr><tr><td>駐車場<td>5000万円<td>50%<td></tr></table>",
       :properties => [
