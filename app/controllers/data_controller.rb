@@ -59,12 +59,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "丸太町京阪前",
+      :station => "川端二条",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "1億4950万円",
+      :amount => "2億3950万円",
       :cards => [],
       :properties => [
         {
@@ -130,14 +130,20 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "烏丸五条",
+      :station => "三条京阪前",
       :style => "team-yellow",
       :x => "36",
       :y => "36",
       :name => "チームC",
-      :amount => "4850万円",
+      :amount => "1850万円",
       :cards => ["急行カード"],
-      :properties => []
+      :properties => [
+        {
+          :name => "ブックオフ",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+      ]
     },
     {
       :station => "東山仁王門",
@@ -1860,7 +1866,7 @@ class DataController < ApplicationController
           :name => "ブックオフ",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "C"
         },
         {
           :name => "駐輪場",
