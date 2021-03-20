@@ -59,12 +59,12 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "七条河原町",
+      :station => "河原町三条",
       :style => "team-blue",
       :x => "36",
       :y => "-6",
       :name => "チームB",
-      :amount => "4億0950万円",
+      :amount => "7950万円",
       :cards => [],
       :properties => [
         {
@@ -82,6 +82,46 @@ class DataController < ApplicationController
           :price => "3000万円",
           :rate => "100%",
         },
+        {
+          :name => "スタバ",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "カラオケ",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "カラオケ",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "映画館",
+          :price => "1億円",
+          :rate => "50%",
+        },
+        {
+          :name => "LOFT",
+          :price => "5000万円",
+          :rate => "70%",
+        },
+        {
+          :name => "楽器屋",
+          :price => "5000万円",
+          :rate => "50%",
+        },
+        {
+          :name => "金の鳥から",
+          :price => "3000万円",
+          :rate => "100%",
+        },
+        {
+          :name => "タピオカ",
+          :price => "1000万円",
+          :rate => "200%",
+        }
       ]
     },
     {
@@ -1309,31 +1349,31 @@ class DataController < ApplicationController
           :name => "スタバ",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "カラオケ",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "カラオケ",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "映画館",
           :price => "1億円",
           :rate => "50%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "LOFT",
           :price => "5000万円",
           :rate => "70%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "商店街",
@@ -1345,19 +1385,19 @@ class DataController < ApplicationController
           :name => "楽器屋",
           :price => "5000万円",
           :rate => "50%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "金の鳥から",
           :price => "3000万円",
           :rate => "100%",
-          :owner => ""
+          :owner => "B"
         },
         {
           :name => "タピオカ",
           :price => "1000万円",
           :rate => "200%",
-          :owner => ""
+          :owner => "B"
         }
       ]
     },
