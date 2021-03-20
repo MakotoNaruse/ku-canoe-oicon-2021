@@ -33,7 +33,7 @@ class DataController < ApplicationController
 
   @@teams = [
     {
-      :station => "百万遍",
+      :station => "烏丸丸太町",
       :style => "team-red",
       :x => "-6",
       :y => "36",
