@@ -172,7 +172,7 @@ class DataController < ApplicationController
       :y => "-6",
       :name => "チームD",
       :amount => "2億3200万円",
-      :cards => ["寺・神社カード","最寄りの駅でカード"],
+      :cards => ["最寄りの駅でカード"],
       :properties => [
         {
           :name => "パフェ店",
@@ -217,7 +217,7 @@ class DataController < ApplicationController
       ]
     },
     {
-      :station => "三条京阪前",
+      :station => "出町柳駅前",
       :style => "kozawa",
       :x => "-6",
       :y => "-6",
@@ -2157,7 +2157,7 @@ class DataController < ApplicationController
       end
       message += "\n"
     end
-    message += "のっぽはCのそばにいるよ！"
+    message += "のっぽは#{noppo}にいるよ！"
     render :plain => message
   end
 
